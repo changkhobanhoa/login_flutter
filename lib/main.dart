@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/screens/doashboard/doashboard_screen.dart';
 
 import 'login_screen.dart';
 
@@ -17,11 +18,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Inter',
-   
+           visualDensity: VisualDensity.adaptivePlatformDensity,
+
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home:   LoginScreen(),
+      home:   DoashBoardScreen(),
     );
   }
 }

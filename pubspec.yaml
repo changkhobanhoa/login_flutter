@@ -41,6 +41,9 @@ dependencies:
   firebase_auth: ^4.6.3
   cached_network_image: ^3.2.3
   simple_fontellico_progress_dialog: ^0.3.0
+  dot_navigation_bar: ^1.0.2
+  feather_icons: ^1.2.0
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
