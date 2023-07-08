@@ -2,7 +2,10 @@
 
   <div class="container" style="display: flex,
 			justify-content: center">
-        <div class="col">
+        <div class="col"  style="display: flex,
+  justify-content: center,
+  align-items: center,
+">
           <img src="https://github.com/changkhobanhoa/login_flutter/assets/106042530/a1d91225-cf1c-4844-a98f-51f9390d3769" width="200">
         </div>
         <div class="col" style="display: flex,
