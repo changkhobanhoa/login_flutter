@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:login/models/product_model.dart';
+import 'package:login/router_generate.dart';
 import 'package:login/screens/products/detail_product_screen.dart';
 
 class ProductGridView extends StatefulWidget {
@@ -35,21 +37,21 @@ class _ProductGridViewState extends State<ProductGridView> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   
                   Stack(children: [
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailProductScreen(products: product)));
+                      onTap: () {
+                        navigator!.pushNamed(RouterGenerator.detailProductPage,
+                            arguments: {"products": product});
                       },
                       child: AspectRatio(
                         aspectRatio: 1.0,
                         child: ClipRRect(
-                            borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16),
                           child: Container(
                             color: product.color,
                             child: Image.asset(
                               product.image,
-                        
+
                               height: height * 20,
                               // width: width * 25,
                             ),

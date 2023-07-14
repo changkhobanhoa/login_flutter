@@ -44,6 +44,8 @@ dependencies:
   dot_navigation_bar: ^1.0.2
   feather_icons: ^1.2.0
   carousel_slider: ^4.2.1
+  page_transition: ^2.0.9
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:

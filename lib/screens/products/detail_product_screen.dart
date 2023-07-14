@@ -3,8 +3,9 @@ import '../../widget/detail_item_image_product.dart';
 import '/models/product_model.dart';
 
 class DetailProductScreen extends StatelessWidget {
-  const DetailProductScreen({super.key, required this.products});
+  DetailProductScreen({super.key, required this.products});
   final Products products;
+  final List<String> availableSizes = ['S', 'M', 'L', 'XL'];
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -117,6 +118,31 @@ class DetailProductScreen extends StatelessWidget {
                       )
                     ],
                   ),
+                  Row(
+                    children: List.generate(availableSizes.length, (index) {
+                      return GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          margin: EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(12.0),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.grey, // Màu border
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: Text(
+                            availableSizes[index],
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ),
+                      );
+                    }),
+                  )
                 ],
               ),
             ),
@@ -125,10 +151,9 @@ class DetailProductScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
         height: 89,
-        padding: EdgeInsets.only(top: 20,left: 10,bottom: 20,right: 10),
+        padding: EdgeInsets.only(top: 20, left: 10, bottom: 20, right: 10),
         color: Colors.grey.shade300,
         child: Container(
-        
           decoration: BoxDecoration(
             color: Colors.blue,
             borderRadius: BorderRadius.circular(
